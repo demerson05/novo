@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ post.title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1><a href="{{ url_for('index') }}" class="logo">Blog Simples</a></h1>
+        </div>
+    </header>
+    <main class="container">
+        <article>
+            <h1>{{ post.title }}</h1>
+            <img src="{{ post.image_url }}" alt="{{ post.title }}" class="post-image">
+            <p>{{ post.body }}</p>
+            <a href="{{ url_for('index') }}" class="button">Voltar</a>
+        </article>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Meu Blog. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
